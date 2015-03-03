@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="default" extends="struts-default">
+	
+		<action name="LoginAction" class="rahulapps.example.LoginAction">
+			<result name="success">/welcome.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="input">/index.jsp</result>
+		</action>
+		
+		<action name="Locale" class="rahulapps.example.LocaleSet">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		<action name="WelcomePage" class="rahulapps.example.WelcomePage">
+			<result name="success">/index.jsp</result>
+			<result name="input">/index.jsp</result>
+		</action>
+		
+	</package>
+	
+</struts>
